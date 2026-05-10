@@ -1,74 +1,66 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
-    <main style={{ fontFamily: "Arial", background: "#0a0a0a", color: "white" }}>
+    <main style={{ fontFamily: "Arial", background: "#0b0b0b", color: "white" }}>
 
-      {/* HERO */}
-      <section style={{
-        padding: "100px 20px",
-        textAlign: "center",
-        background: "linear-gradient(135deg,#111,#1a1a1a)"
+      {/* HEADER */}
+      <header style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: "20px 30px",
+        borderBottom: "1px solid #222"
       }}>
-        <h1 style={{ fontSize: "48px", marginBottom: "10px" }}>
-          Maçonnerie Générale
-        </h1>
-        <p style={{ fontSize: "18px", opacity: 0.8 }}>
-          Île-de-France • Rénovation • Gros œuvre • Terrassement
-        </p>
+        
+        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <Image src="/logo.png" alt="logo" width={50} height={50} />
+          <strong>EMGO BTP</strong>
+        </div>
 
         <a
           href="https://wa.me/33665420978"
           style={{
-            display: "inline-block",
-            marginTop: "25px",
-            padding: "14px 22px",
             background: "#25D366",
+            padding: "10px 15px",
+            borderRadius: "8px",
             color: "white",
-            borderRadius: "10px",
             textDecoration: "none",
             fontWeight: "bold"
           }}
         >
-          📞 Devis Gratuit WhatsApp
+          WhatsApp
         </a>
+      </header>
+
+      {/* HERO */}
+      <section style={{ textAlign: "center", padding: "80px 20px" }}>
+        <h1 style={{ fontSize: "40px" }}>
+          Maçonnerie Générale
+        </h1>
+        <p style={{ opacity: 0.7 }}>
+          Île-de-France • Rénovation • Gros œuvre • Terrassement
+        </p>
       </section>
 
       {/* SERVICES */}
-      <section style={{ padding: "60px 20px" }}>
-        <h2 style={{ textAlign: "center", marginBottom: "30px" }}>
-          Nos Services
-        </h2>
-
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))",
-          gap: "15px"
-        }}>
-          {["Maçonnerie", "Rénovation", "Gros œuvre", "Terrassement"].map((s) => (
-            <div key={s} style={{
-              background: "#151515",
-              padding: "20px",
-              borderRadius: "12px",
-              textAlign: "center"
-            }}>
-              {s}
-            </div>
-          ))}
-        </div>
+      <section style={{ padding: "40px 20px" }}>
+        <h2>Nos Services</h2>
+        <ul>
+          <li>Maçonnerie générale</li>
+          <li>Rénovation</li>
+          <li>Gros œuvre</li>
+          <li>Terrassement</li>
+        </ul>
       </section>
 
       {/* GALLERY */}
-      <section style={{ padding: "60px 20px" }}>
-        <h2 style={{ textAlign: "center", marginBottom: "20px" }}>
-          Chantiers
-        </h2>
+      <section style={{ padding: "40px 20px" }}>
+        <h2>Chantiers</h2>
 
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
-          gap: "10px"
-        }}>
-          <img src="/chantier.jpg" style={{ width: "100%", borderRadius: "10px" }} />
-          <img src="/chantier.jpeg" style={{ width: "100%", borderRadius: "10px" }} />
+        <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+          <img src="/chantier.jpg" width="300" />
+          <img src="/chantier.jpeg" width="300" />
         </div>
       </section>
 
@@ -76,9 +68,9 @@ export default function Home() {
       <footer style={{
         textAlign: "center",
         padding: "30px",
-        opacity: 0.6
+        opacity: 0.5
       }}>
-        © Maçonnerie Générale - Île-de-France
+        © EMGO BTP - Maçonnerie Générale
       </footer>
 
     </main>
