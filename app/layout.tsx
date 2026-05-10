@@ -31,3 +31,8 @@ export default function RootLayout({
     </html>
   );
 }
+export const metadata = {
+  title: "Maçonnerie Générale Île-de-France | Fenêtres & Rénovation",
+  description:
+    "Entreprise de maçonnerie générale en Île-de-France. Travaux de rénovation, création d'ouvertures, fenêtres, gros œuvre et terrassement. Devis gratuit.",
+};
