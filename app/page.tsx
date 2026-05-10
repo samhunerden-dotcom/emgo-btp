@@ -1,201 +1,55 @@
 export default function Home() {
   return (
-    <div
-      style={{
-        background: "#0a0a0a",
-        color: "white",
-        minHeight: "100vh",
-        fontFamily: "Arial",
-      }}
-    >
-      {/* HEADER */}
-      <header
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "25px 40px",
-          borderBottom: "1px solid #222",
-        }}
-      >
-        <img
-          src="/logo.png"
-          alt="Logo"
-          style={{
-            height: "70px",
-            objectFit: "contain",
-          }}
-        />
-
-        <a
-          href="https://wa.me/33665420978"
-          style={{
-            background: "green",
-            color: "white",
-            padding: "10px 18px",
-            borderRadius: "8px",
-            textDecoration: "none",
-            fontWeight: "bold",
-          }}
-        >
-          WhatsApp
-        </a>
-      </header>
+    <main style={{ fontFamily: "Arial", background: "#0b0b0b", color: "white", padding: "20px" }}>
 
       {/* HERO */}
-      <section
-        style={{
-          textAlign: "center",
-          padding: "100px 20px 60px",
-        }}
-      >
-        <h2
-          style={{
-            fontSize: "52px",
-            marginBottom: "20px",
-          }}
-        >
-          Construction & Rénovation
-        </h2>
-
-        <p
-          style={{
-            color: "#aaa",
-            fontSize: "20px",
-          }}
-        >
-          Maçonnerie • Gros œuvre • Terrassement
-        </p>
+      <section style={{ textAlign: "center", padding: "80px 20px" }}>
+        <h1 style={{ fontSize: "40px" }}>Maçonnerie Générale</h1>
+        <p>Île-de-France • Devis gratuit sous 24h</p>
 
         <a
           href="https://wa.me/33665420978"
           style={{
             display: "inline-block",
-            marginTop: "30px",
-            padding: "14px 28px",
-            background: "green",
+            marginTop: "20px",
+            padding: "12px 20px",
+            background: "#25D366",
             color: "white",
-            borderRadius: "10px",
-            textDecoration: "none",
-            fontWeight: "bold",
-            fontSize: "18px",
+            borderRadius: "8px",
+            textDecoration: "none"
           }}
         >
-          Demander un devis
+          WhatsApp Devis
         </a>
       </section>
 
-      {/* IMAGES */}
-      <section
-        style={{
-          display: "flex",
-          gap: "20px",
-          padding: "20px 40px",
-        }}
-      >
-        <img
-          src="/chantier.jpg"
-          alt="chantier"
-          style={{
-            width: "50%",
-            borderRadius: "16px",
-            objectFit: "cover",
-          }}
-        />
-
-        <img
-          src="/chantier.jpeg"
-          alt="chantier"
-          style={{
-            width: "50%",
-            borderRadius: "16px",
-            objectFit: "cover",
-          }}
-        />
+      {/* SERVICES */}
+      <section>
+        <h2>Nos Services</h2>
+        <ul>
+          <li>Maçonnerie générale</li>
+          <li>Rénovation</li>
+          <li>Gros œuvre</li>
+          <li>Terrassement</li>
+        </ul>
       </section>
 
-      {/* SERVICES */}
-      <section
-        style={{
-          padding: "80px 40px",
-        }}
-      >
-        <h3
-          style={{
-            fontSize: "36px",
-            marginBottom: "40px",
-            textAlign: "center",
-          }}
-        >
-          Nos Services
-        </h3>
+      {/* GALLERY */}
+      <section style={{ marginTop: "40px" }}>
+        <h2>Chantiers</h2>
 
-        <div
-          style={{
-            display: "flex",
-            gap: "20px",
-            justifyContent: "center",
-            flexWrap: "wrap",
-          }}
-        >
-          <div
-            style={{
-              background: "#151515",
-              padding: "30px",
-              borderRadius: "16px",
-              width: "300px",
-            }}
-          >
-            <h4>Maçonnerie</h4>
-
-            <p style={{ color: "#aaa" }}>
-              Construction, murs et gros œuvre.
-            </p>
-          </div>
-
-          <div
-            style={{
-              background: "#151515",
-              padding: "30px",
-              borderRadius: "16px",
-              width: "300px",
-            }}
-          >
-            <h4>Rénovation</h4>
-
-            <p style={{ color: "#aaa" }}>
-              Intérieur et extérieur.
-            </p>
-          </div>
-
-          <div
-            style={{
-              background: "#151515",
-              padding: "30px",
-              borderRadius: "16px",
-              width: "300px",
-            }}
-          >
-            <h4>Terrassement</h4>
-
-            <p style={{ color: "#aaa" }}>
-              Préparation terrain et fondations.
-            </p>
-          </div>
+        <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+          <img src="/chantier.jpg" width="300" />
+          <img src="/chantier.jpeg" width="300" />
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer
-        style={{
-          borderTop: "1px solid #222",
-          padding: "30px",
-          textAlign: "center",
-          color: "#777",
-        }}
-      >
-        © 2026 EM-GO BTP
-      </footer>
-    </div>
+      {/* CONTACT */}
+      <section style={{ marginTop: "40px" }}>
+        <h2>Contact</h2>
+        <p>📞 06 65 42 09 78</p>
+      </section>
+
+    </main>
   );
 }
